@@ -17,86 +17,86 @@ Cleaning
 - top_n(20)
 - top_n(-20)
 
-1
-Managing the loan or lease
-VA
-Wells Fargo & Company
-2
-Using a debit or ATM card
-CA
-Wells Fargo & Company
-3
-Account opening, closing, or management
-NY
-Santander Bank US
-4
-Deposits and withdrawals
-GA
-Wells Fargo & Company
-5
-Loan servicing, payments, escrow account
-CT
-Franklin Credit Management
-6
-Deposits and withdrawals
-TX
-Bank of America
-7
-Cont'd attempts collect debt not owed
-VA
-NRA Group, LLC
-8
-Cont'd attempts collect debt not owed
-FL
-SunTrust Banks, Inc.
-9
-Billing statement
-OH
-Citibank
-10
-Loan servicing, payments, escrow account
-NV
-Wells Fargo & Company
-11
-Loan modification,collection,foreclosure
-NC
-Bank of America
-12
-Loan servicing, payments, escrow account
-CA
-JPMorgan Chase & Co.
-13
-Loan modification,collection,foreclosure
-CA
-Citibank
-14
-Communication tactics
-PA
-Asset Management Professionals, LLC
-15
-Communication tactics
-PA
-Wells Fargo & Company
-16
-Loan modification,collection,foreclosure
-NY
-JPMorgan Chase & Co.
-17
-Loan modification,collection,foreclosure
-FL
-Ocwen
-18
-Loan modification,collection,foreclosure
-NY
-JPMorgan Chase & Co.
-19
-Loan servicing, payments, escrow account
-NJ
-Citibank
-20
-APR or interest rate
-WA
-Synchrony Financial
+1. 
+-Managing the loan or lease
+-VA
+-Wells Fargo & Company
+2.
+-Using a debit or ATM card
+-CA
+-Wells Fargo & Company
+3.
+-Account opening, closing, or management
+-NY
+-Santander Bank US
+4.
+-Deposits and withdrawals
+-GA
+-Wells Fargo & Company
+5.
+-Loan servicing, payments, escrow account
+-CT
+-Franklin Credit Management
+6.
+-Deposits and withdrawals
+-TX
+-Bank of America
+7.
+-Cont'd attempts collect debt not owed
+-VA
+-NRA Group, LLC
+8.
+-Cont'd attempts collect debt not owed
+-FL
+-SunTrust Banks, Inc.
+9.
+-Billing statement
+-OH
+-Citibank
+10.
+-Loan servicing, payments, escrow account
+-NV
+-Wells Fargo & Company
+11.
+-Loan modification,collection,foreclosure
+-NC
+-Bank of America
+12.
+-Loan servicing, payments, escrow account
+-CA
+-JPMorgan Chase & Co.
+13.
+-Loan modification,collection,foreclosure
+-CA
+-Citibank
+14.
+-Communication tactics
+-PA
+-Asset Management Professionals, LLC
+15.
+-Communication tactics
+-PA
+-Wells Fargo & Company
+16.
+-Loan modification,collection,foreclosure
+-NY
+-JPMorgan Chase & Co.
+17.
+-Loan modification,collection,foreclosure
+-FL
+-Ocwen
+18.
+-Loan modification,collection,foreclosure
+-NY
+-JPMorgan Chase & Co.
+19.
+-Loan servicing, payments, escrow account
+-NJ
+-Citibank
+20.
+-APR or interest rate
+-WA
+-Synchrony Financial
 
 
 ![Rplot04](https://user-images.githubusercontent.com/113206712/222854806-aa75652d-9789-483d-9345-2eb3ea3a76dd.png)
