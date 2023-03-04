@@ -3,13 +3,13 @@
 - I will analyze what the most common issues are in companies
 
 
-#Dictionary 
+# Dictionary 
 1. Issue: different issues reported by a customer
 2. Comapny: Specific comapny related to the issues 
 3. State: Where the customer is from 
 4. Sentiment: Positive + negative
 
-#Cleaning
+# Cleaning
 1. Removed rows that I didn't use
 2. Cut the data down to 50000 columns
 - df2 <- df2[1:50000, ]
@@ -17,7 +17,7 @@
 - top_n(20)
 - top_n(-20)
 
-#Data Summary
+# Data Summary
   Issue : State : Company
   1. Managing the loan or lease : VA : Wells Fargo & Company
 
@@ -60,14 +60,17 @@
   20. APR or interest rate : WA : Synchrony Financial
 
 
-#Data Analysis
+# Data Analysis
 1. shows the company with the most complaints
+
 ![Rplot04](https://user-images.githubusercontent.com/113206712/222854806-aa75652d-9789-483d-9345-2eb3ea3a76dd.png)
 - 
 2. shows the most used negative word
+
 ![Rplot03](https://user-images.githubusercontent.com/113206712/222854581-f06da9ae-8d48-470f-ac38-f7be090b20d3.png)
 
 3. shows the bottom 20 sentiment companies
+
 ![Rplot02](https://user-images.githubusercontent.com/113206712/222854573-6e0dcdf6-8756-4be6-8896-ddf6b097b24f.png)
 
 
