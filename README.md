@@ -17,18 +17,9 @@ Cleaning
 - top_n(20)
 - top_n(-20)
 
-1. 
--Managing the loan or lease
--VA
--Wells Fargo & Company
-2.
--Using a debit or ATM card
--CA
--Wells Fargo & Company
-3.
--Account opening, closing, or management
--NY
--Santander Bank US
+1. Managing the loan or lease: VA: Wells Fargo & Company
+2.Using a debit or ATM card: CA: Wells Fargo & Company
+3.Account opening, closing, or management: NY: Santander Bank US
 4.
 -Deposits and withdrawals
 -GA
