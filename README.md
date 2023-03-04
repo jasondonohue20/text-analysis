@@ -135,4 +135,41 @@ problem_sentiment <- problems_bing %>%
 
 problem_sentiment %>%  top_n(-20) %>% ggplot(aes(Company, sentiment)) + geom_col() + xlab(NULL) + coord_flip()  
 
+# shiny app
+
+![B703D05D-FB87-416B-B893-E301A1A1739B](https://user-images.githubusercontent.com/113206712/222869507-e866d4f1-896a-4782-b813-0e8a8747ef59.jpeg)
+
+- allows user to see how state, issue, and company relate
+
+# code for shiny app
+
+dataset<- df3
+column_names<-colnames(dataset) #for input selections
+
+ui<-fluidPage( 
+  
+  titlePanel(title = "Companies Issues"),
+
+  
+  fluidRow(
+    column(2,
+           selectInput('X', 'Choose X',column_names,column_names[1]),
+           selectInput('Y', 'Choose Y',column_names,column_names[3]),
+           selectInput('Splitby', 'Split By', column_names,column_names[2])
+    ),
+    column(4,plotOutput('plot_01')),
+    column(6,DT::dataTableOutput("table_01", width = "100%"))
+  )
+  
+  
+)
+
+server<-function(input,output){
+  
+
+  
+  output$table_01<-DT::renderDataTable(dataset[,c(input$X,input$Y,input$Splitby)],options = list(pageLength = 4))
+}
+
+shinyApp(ui=ui, server=server)
 
