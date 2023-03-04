@@ -93,7 +93,7 @@ df3 <- df2 %>%
 df3review <- df3 %>% 
   count(Company, sort = TRUE) 
 
-#shows the company with the most complaints
+
 df3review %>%  top_n(20) %>% ggplot(aes(Company, n)) + geom_col() + xlab(NULL) + coord_flip()
 
 
@@ -117,7 +117,7 @@ df2_review2 <- df2_review %>%
   count(word, sort = TRUE)
 
 
-#shows the most used negative word
+
 df2_review2 %>% top_n(20) %>% ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
 
 
@@ -132,7 +132,7 @@ problem_sentiment <- problems_bing %>%
   pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
   mutate(sentiment = positive - negative)
 
-#shows the bottom 20 sentiment companies
+
 problem_sentiment %>%  top_n(-20) %>% ggplot(aes(Company, sentiment)) + geom_col() + xlab(NULL) + coord_flip()  
 
 
