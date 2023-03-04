@@ -64,14 +64,75 @@
 1. shows the company with the most complaints
 
 ![Rplot04](https://user-images.githubusercontent.com/113206712/222854806-aa75652d-9789-483d-9345-2eb3ea3a76dd.png)
-- 
+- Bank of America is the leader in complaints
+- The companies that have complaints is a lot closer then the type of complaints
+- different companies get the same kind of complaints
+
 2. shows the most used negative word
 
 ![Rplot03](https://user-images.githubusercontent.com/113206712/222854581-f06da9ae-8d48-470f-ac38-f7be090b20d3.png)
+- Debts and incorrect are the most common words
+- Not many issues are repeated
 
 3. shows the bottom 20 sentiment companies
 
 ![Rplot02](https://user-images.githubusercontent.com/113206712/222854573-6e0dcdf6-8756-4be6-8896-ddf6b097b24f.png)
 
+- Combined postive and negative words
+- Experian has the worst score under -2000
+- multiple comanies are negative
+
+
+ 
+
+# graph #1 code
+
+df3 <- df2 %>%
+  select(Issue, State, Company)
+
+df3review <- df3 %>% 
+  count(Company, sort = TRUE) 
+
+#shows the company with the most complaints
+df3review %>%  top_n(20) %>% ggplot(aes(Company, n)) + geom_col() + xlab(NULL) + coord_flip()
+
+
+# graph #2 code 
+
+df2_review <- df2 %>%
+  unnest_tokens(word, Issue) %>%
+  anti_join(stop_words) 
+
+df2_review %>%
+  count(word) %>%
+  arrange(desc(n))
+
+
+
+nrc_negative <- get_sentiments("nrc") %>% 
+  filter(sentiment == "negative")
+
+df2_review2 <- df2_review %>%
+  inner_join(nrc_negative) %>%
+  count(word, sort = TRUE)
+
+
+#shows the most used negative word
+df2_review2 %>% top_n(20) %>% ggplot(aes(word, n)) + geom_col() + xlab(NULL) + coord_flip()
+
+
+# graph #3 code
+
+problems_bing <- df2_review %>%
+  inner_join(get_sentiments("bing")) 
+  
+
+problem_sentiment <- problems_bing %>%
+  count(Company, word, sentiment) %>%
+  pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
+  mutate(sentiment = positive - negative)
+
+#shows the bottom 20 sentiment companies
+problem_sentiment %>%  top_n(-20) %>% ggplot(aes(Company, sentiment)) + geom_col() + xlab(NULL) + coord_flip()  
 
 
