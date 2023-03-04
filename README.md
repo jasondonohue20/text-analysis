@@ -1,15 +1,15 @@
 # text-analysis
-Introduction
+#Introduction
 - I will analyze what the most common issues are in companies
 
 
-Dictionary 
+#Dictionary 
 1. Issue: different issues reported by a customer
 2. Comapny: Specific comapny related to the issues 
 3. State: Where the customer is from 
 4. Sentiment: Positive + negative
 
-Cleaning
+#Cleaning
 1. Removed rows that I didn't use
 2. Cut the data down to 50000 columns
 - df2 <- df2[1:50000, ]
@@ -17,7 +17,7 @@ Cleaning
 - top_n(20)
 - top_n(-20)
 
-Data Summary
+#Data Summary
   Issue : State : Company
   1. Managing the loan or lease : VA : Wells Fargo & Company
 
@@ -60,7 +60,7 @@ Data Summary
   20. APR or interest rate : WA : Synchrony Financial
 
 
-Data Analysis
+#Data Analysis
 1. shows the company with the most complaints
 ![Rplot04](https://user-images.githubusercontent.com/113206712/222854806-aa75652d-9789-483d-9345-2eb3ea3a76dd.png)
 - 
