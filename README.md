@@ -11,8 +11,6 @@
 
 # Cleaning
 1. Removed rows that I didn't use
-2. Cut the data down to 50000 columns
-- df2 <- df2[1:50000, ]
 3. took the top 20 for each graph
 - top_n(20)
 - top_n(-20)
@@ -137,39 +135,17 @@ problem_sentiment %>%  top_n(-20) %>% ggplot(aes(Company, sentiment)) + geom_col
 
 # shiny app
 
-![B703D05D-FB87-416B-B893-E301A1A1739B](https://user-images.githubusercontent.com/113206712/222869507-e866d4f1-896a-4782-b813-0e8a8747ef59.jpeg)
+![3FFDA2ED-FA29-4C94-99DE-17A800379880](https://user-images.githubusercontent.com/113206712/222988774-5a3207dd-a43b-4d75-8575-44f4800dd9c8.jpeg)
+ relate
 
-- allows user to see how state, issue, and company relate
+- In the input section the user has to choose up to 20 companies that they want to see 
+- 20 is the limit so the data isn't clustered
+- In the output section of the code I have the graph changing based on what the user inputs by using input$n
+- I used a bar graph because I thought it was the easiest way to see the total number of issues for each company
+
 
 # code for shiny app
 
-dataset<- df3
-column_names<-colnames(dataset) #for input selections
+![49826F3A-B351-4BAF-94E3-01DFDE9C0098](https://user-images.githubusercontent.com/113206712/222989007-5a6d1619-18f4-4c30-8fbe-509211fa57b5.jpeg)
 
-ui<-fluidPage( 
-  
-  titlePanel(title = "Companies Issues"),
-
-  
-  fluidRow(
-    column(2,
-           selectInput('X', 'Choose X',column_names,column_names[1]),
-           selectInput('Y', 'Choose Y',column_names,column_names[3]),
-           selectInput('Splitby', 'Split By', column_names,column_names[2])
-    ),
-    column(4,plotOutput('plot_01')),
-    column(6,DT::dataTableOutput("table_01", width = "100%"))
-  )
-  
-  
-)
-
-server<-function(input,output){
-  
-
-  
-  output$table_01<-DT::renderDataTable(dataset[,c(input$X,input$Y,input$Splitby)],options = list(pageLength = 4))
-}
-
-shinyApp(ui=ui, server=server)
 
