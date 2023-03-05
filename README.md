@@ -60,6 +60,7 @@
 
 # Data Analysis
 1. shows the most used negative words
+
 ![Rplot05](https://user-images.githubusercontent.com/113206712/222989262-5682cedd-1a58-48f6-af64-5a67821664e4.png)
 
 
